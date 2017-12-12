@@ -2,9 +2,9 @@ from apscheduler.schedulers.blocking import BlockingScheduler
 
 sched = BlockingScheduler()
 
-@sched.scheduled_job('interval', minutes=3)
+@sched.scheduled_job('interval', minutes=360)
 def timed_job():
-    print('This job is run every three minutes.')
+    print('This job is run every six hours.')
 
 @sched.scheduled_job('cron', day_of_week='mon-fri', hour=17)
 def scheduled_job():
